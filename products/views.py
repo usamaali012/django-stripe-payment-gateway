@@ -94,7 +94,7 @@ def stripe_webhook(request):
             from_email="your@email.com"
         )
 
-    elif event["type"] == "payment_intent.succeeded":
+    elif event["type"] == 'payment_intent.succeeded':
         intent = event['data']['object']
 
         stripe_customer_id = intent["customer"]
